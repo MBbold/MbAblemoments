@@ -8,7 +8,6 @@ const SplashContext = createContext();
 export const SplashProvider = ({children}) => {
   const [isSplash, setIsSplash] = useState('');
   const {getItem, setItem} = useAsyncStorage('splash_key');
-
   const getItemData = async () => {
     const value = await getItem();
     setIsSplash(value);
